@@ -1,4 +1,127 @@
 <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<!-- The App Section -->
+<div class="container">
+<div class="mapouter"><div class="gmap_canvas"><iframe width="575" height="569" id="gmap_canvas" src="https://maps.google.com/maps?q=florida%20&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{position:;text-align:right;height:569px;width:575px;}.gmap_canvas {overflow:hidden;background:none!important;height:569px;width:575px;}</style></div>
+</div>
+
+<!-- Clarity Section -->
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+    <h1 class="xlarge-font"><b>Top Reviews</b></h1>
+    </div>
+    
+
+</div> 
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Cape Coral</h3><br>
+  <i class="fa fa-building w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Cape Coral is super boring...</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Tampa </h3><br>
+  <i class="fa fa-building w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>What is tampa</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Estero</h3><br>
+  <i class="fa fa-university w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Ew Estero!!</p>
+  </div>
+</div>   
+    </div>
+  </div>
+</div>
+
+<!-- The App Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Write a Review</b></h1>
+    </div>
+  </div>
+</div>
 <html lang="en">
 <title>CityRater</title>
 <meta charset="UTF-8">
@@ -37,61 +160,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<!-- Header/Map -->
-<header class="w3-container w3-blue w3-center" style="padding:128px 16px">
-<head>
-<meta charset="utf-8" />
-<title>Display a map</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
-<style>
-	body { margin: 0; padding: 0; }
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
-</head>
-</header>
-<body>
-<div id="map">
-<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiY2l0eXJhdGVyIiwiYSI6ImNrZ2xoeXBpYjAyd3UydHBnajVydDNxMGQifQ.tD5CbRvopdJBRsccNLeTXA';
-    var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-81, 26], // starting position [lng, lat]
-        zoom: 9 // starting zoom
-    });
-</script>
-</div>
- <div class="w3-container w3-blue">
-  <h1>Top Reviews</h1>
-</div> 
-<div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Cape Coral</h3><br>
-  <i class="fa fa-building w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Cape Coral is super boring, I think 90% of the population is old people</p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Tampa </h3><br>
-  <i class="fa fa-building w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>What is tampa</p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>Estero</h3><br>
-  <i class="fa fa-university w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Ew Estero!!</p>
-  </div>
-</div>
-</div>
+<!-- Header -->
 </body>
-
-
-
+</html>
